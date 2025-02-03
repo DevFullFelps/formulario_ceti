@@ -1,26 +1,88 @@
-.banner {
+.container-pai{
     position: relative;
-    height: 400px; /* Altura do banner */
-    background-image: url('../assets/banner-ceti.png'); /* Caminho da imagem */
-    background-size: cover; /* Cobrir todo o espaço */
-    background-position: center; /* Centralizar a imagem */
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
     display: flex;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    color: white; /* Cor do texto */
-  }
-  
-  .banner-overlay {
+    justify-content: flex-end;
+}
+
+.background-image{
+    background: url('./img/imagem-fundo.jpg');
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Overlay escuro */
-  }
-  
-  .banner-content {
-    position: relative;
-    z-index: 1; /* Garante que o texto fique acima do overlay */
-  }
+    filter: blur(8px);
+    z-index: -1;
+}
+
+.faixa-container-pai{
+    background-color: #151419;
+    color: snow;
+    width: 30vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    box-shadow: -10px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-principal{
+    font-size: 4rem;
+    text-align: center;
+    max-width: 100%;
+    color: #f56f10;
+    text-shadow: 2px 2px 8px rgba(245, 111, 16, 0.6);
+}
+
+.titulo-principal::after{
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #f56f10, transparent);
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.faixa-animada{
+    position: absolute;
+    top: 40%;
+    left: 0;
+    width: 50vw;
+    height: 80px;
+    background-color: #878787;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: #fbfbfb;
+    font-weight: bold;
+    border-radius: 0px 5px 30px 0px;
+    z-index: 2;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+}
+
+.bloco-info{
+    position: absolute;
+    bottom: 10%;
+    left: 5%;
+    background-color: #262626;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    text-align: center;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.4);
+    transition: all 0.3s ease-in-out;
+}
+
+.bloco-info:hover{
+    transform: scale(1.05);
+    background-color: #1b1a1f;
+}

@@ -6,10 +6,11 @@ import Header from './components/Header';
 function App() {
   return (
     <div className="App">
-      <Header /> {/* Navbar (se existir) */}
-      <Banner /> {/* Banner de boas-vindas */}
+      <Banner /> 
+      <Header /> 
+
       <main>
-        {/* Conteúdo da sua landing page */}
+        
       </main>
     </div>
   );
